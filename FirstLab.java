@@ -32,7 +32,7 @@ public class FirstLab
 	public static void bonus()
 	{
 		// Write the code HERE to display a silly face or picture
-		System.out.println("\n+--------------------------------------------+");
+		System.out.println("+--------------------------------------------+");
 		System.out.println("|                HAPPY MOON                  |");
 		System.out.println("|                ____....                    |");
 		System.out.println("|               a#####~:::::::,              |");
