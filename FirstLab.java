@@ -18,9 +18,9 @@ public class FirstLab
 		System.out.println("+====================+");
 		System.out.println("|    \"Kevin Meng\"    |");
 		System.out.println("+====================+");
-		System.out.println("|  4721 De Grey Ln.  |");
+		System.out.println("|  1274 Grey De St.  |");
 		System.out.println("+====================+");
-		System.out.println("| Plano, Texas 75093 |");
+		System.out.println("| Plano, Texas 75063 |");
 		System.out.println("+====================+");
 		
 		// This calls the bonus method to draw your silly face/picture
