@@ -26,6 +26,7 @@ public class BugLandRunner
 		ActorWorld world = new ActorWorld();
 		
 		// Create ArrayLists to store all bugs and rocks
+		
 		ArrayList<Bug> bugList = new ArrayList<Bug>();
 		ArrayList<Rock> rockList = new ArrayList<Rock>();
 
