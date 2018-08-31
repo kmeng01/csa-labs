@@ -84,6 +84,7 @@ public class BugLandRunner
 		System.out.println("Direction: " + fifthBugDir + "\nLocation: " + fifthBugLoc);
 
 		// Show the world in GUI
+		
 		world.show();
 	}
 }
