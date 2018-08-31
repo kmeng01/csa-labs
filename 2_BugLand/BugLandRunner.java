@@ -1,11 +1,12 @@
 /** 
- * The BugLandRunner class DOES SOMETHING
+ * The BugLandRunner class creates 5 bugs and 12 rocks on a graphical user interface, 
+ * moves the 5th bug twice, and retrieves positional information about the 5th bug.
  *
  * @author Kevin Meng
  * Collaborators: None
  * Teacher Name: Mrs. Ishman
  * Period: 7
- * Due Date: SOMETHING
+ * Due Date: 09/04/2018
  */
 
 import java.awt.Color;
@@ -32,7 +33,8 @@ public class BugLandRunner
 
 		// Initialize arrays with information for each bug
 		
-		Location[] bugLocs = {new Location(0, 4), new Location(5, 0), new Location(9, 5), new Location(4, 9)};
+		Location[] bugLocs = {
+			new Location(0, 4), new Location(5, 0), new Location(9, 5), new Location(4, 9)};
 		Color[] bugColors = {Color.RED, Color.BLUE, Color.GREEN, Color.MAGENTA};
 		int[] bugDirs = {135, 45, -45, 225};
 		
@@ -58,7 +60,9 @@ public class BugLandRunner
 			{
 				float r = rand.nextFloat(), g = rand.nextFloat(), b = rand.nextFloat();
 				Rock tempRock = new Rock(new Color(r, g, b));
-				world.add(new Location(rockPos[i][0] += rockPos[i][2], rockPos[i][1] += rockPos[i][3]), tempRock);
+				world.add(
+					new Location(rockPos[i][0] += rockPos[i][2], rockPos[i][1] += rockPos[i][3]),
+					tempRock);
 				rockList.add(tempRock);
 			}
 		}
