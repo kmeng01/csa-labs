@@ -26,19 +26,19 @@ public class BugLandRunner
 		ActorWorld world = new ActorWorld();
 		
 		// Create ArrayLists to store all bugs and rocks
-		
+
 		ArrayList<Bug> bugList = new ArrayList<Bug>();
 		ArrayList<Rock> rockList = new ArrayList<Rock>();
 
 		// Initialize arrays with information for each bug
 		
-		Location[] bugLocs = {new Location(0,4), new Location(5,0), new Location(9,5), new Location(4,9)};
+		Location[] bugLocs = {new Location(0, 4), new Location(5, 0), new Location(9, 5), new Location(4, 9)};
 		Color[] bugColors = {Color.RED, Color.BLUE, Color.GREEN, Color.MAGENTA};
 		int[] bugDirs = {135, 45, -45, 225};
 		
 		// Add all bugs to world in specifically designated locations, bugColors, and directions
 		
-		for (int i=0; i<4; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			Bug tempBug = new Bug(bugColors[i]);
 			tempBug.setDirection(bugDirs[i]);
@@ -52,9 +52,9 @@ public class BugLandRunner
 
 		// Fill in rocks at designated positions with different randomized colors
 		
-		for (int i=0; i<4; i++)
+		for (int i = 0; i < 4; i++)
 		{
-			for (int j=0; j<4; j++)
+			for (int j = 0; j < 4 ; j++)
 			{
 				float r = rand.nextFloat(), g = rand.nextFloat(), b = rand.nextFloat();
 				Rock tempRock = new Rock(new Color(r, g, b));
