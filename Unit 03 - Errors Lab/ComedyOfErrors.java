@@ -1,7 +1,13 @@
-/**
- *	ComedyOfErrors Class
- *	Attempts to convert the degrees in Celsius input by the user
- *  to Fahrenheit using the formula F = 1.8 x C + 32
+/** 
+ * The ComedyOfErrors Class converts a given temperature in degres
+ * Celcius to its corresponding value in Fahrenheit using the formula
+ * F = 1.8 x C + 32
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 09/12/2018
  */
 
 import java.util.Scanner;
