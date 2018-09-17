@@ -1,4 +1,14 @@
-// add your 6-item heading here 
+/** 
+ * The BodyMassIndex Class receives a user's weight and height and outputs
+ * his/her Body Mass Index. Weight can be inputted in either kilograms or pounds,
+ * and height can be inputted in either centimeters or inches.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 09/19/2018
+ */
 
 import java.util.Scanner;
 
@@ -45,6 +55,7 @@ public class BodyMassIndex
 		heightCM = sc.nextInt();
 
 		double bmi = getBMI(weightKG, heightCM);
+
 		System.out.printf("\nA body mass index of 20 - 25 is considered \"normal\"\n");
 		System.out.printf("Your BMI is %.2f\n\n", bmi);
 	} 
