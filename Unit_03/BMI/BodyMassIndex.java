@@ -45,18 +45,23 @@ public class BodyMassIndex
 	 */
 	public static void calculateMetricBMI()
 	{
+		// Declare variables to store data
 		int weightKG, heightCM;
 
+		// Collect user's weight in kilograms
 		System.out.print("Enter your weight in kilograms: ");
 		System.out.flush();
 		weightKG = sc.nextInt();
 
+		// Collect user's height in centimeters
 		System.out.print("\nEnter your height in centimeters: ");
 		System.out.flush();
 		heightCM = sc.nextInt();
 
+		// Calculate BMI
 		double bmi = getBMI(weightKG, heightCM);
 
+		// Display BMI
 		System.out.printf("\nA body mass index of 20 - 25 is considered \"normal\"\n");
 		System.out.printf("Your BMI is %.2f\n\n", bmi);
 	} 
@@ -81,23 +86,31 @@ public class BodyMassIndex
 	 */
 	public static void calculateImperialBMI()
 	{
+		// Declare variables to store data
 		int weightLB, heightIN;
 
+		// Collect user's weight in pounds
 		System.out.print("Enter your weight in pounds: ");
 		System.out.flush();
 		weightLB = sc.nextInt();
 
+		// Collect user's height in inches
 		System.out.print("\nEnter your height in inches: ");
 		System.out.flush();
 		heightIN = sc.nextInt();
 
+		// Converts imperial units to metric units
 		int weightKG = convertPoundsToKG(weightLB);
 		int heightCM = convertInchesToCM(heightIN);
 
+		// Calculate BMI
 		double bmi = getBMI(weightKG, heightCM);
+		
+		// Display BMI
 		System.out.printf("\nA body mass index of 20 - 25 is considered \"normal\"\n");
 		System.out.printf("Your BMI is %.2f\n\n", bmi);
 
+		// Close Scanner to prevent resource leaks
 		sc.close();
 	}
 
