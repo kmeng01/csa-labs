@@ -1,9 +1,9 @@
 /** 
- * The RoachMotel Class represents a location and stores the number of 
+ * The RoachPopulation Class represents a location and stores the number of 
  * roaches in that location. It provides a constructor to define the number 
  * of initial roaches. Also provided are methods to get the roach population,
  * wait for the population to double, and spray a poison to kill a number of 
- * roaches
+ * roaches.
  *
  * @author Kevin Meng
  * Collaborators: None
