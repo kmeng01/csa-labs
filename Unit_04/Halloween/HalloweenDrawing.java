@@ -1,4 +1,4 @@
-
+// collaborator: deddie shoe
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -29,29 +29,43 @@ public class HalloweenDrawing extends JComponent
 		
 		// Draw house 
 		drawHouse();
+		drawHouseFeatures(50, 100, (int)(width / 3), (int)(height / 2));
 		
 		// Draw pumpkin
 		drawPumpkin();
 		
 		// Draw greeting
 		g2.setColor(Color.RED);
-		g2.drawString("Welcome to spooky shit", 10, 10);
+		g2.drawString("Welcome to spooky shack", 10, 10);
 	}
 	
 	/** 
 	 */
 	public void drawHouse()
 	{
-		g2.setColor(Color.GRAY);
-		Rectangle rect = new Rectangle(50, 50, width / 3.0,  height / 4.0);
+		g2.setColor(new Color(166, 128, 100));
+		Rectangle rect = new Rectangle(50, 100, width / 3,  height / 2);
 		g2.fill(rect);
+		
+		g2.setColor(Color.BLACK);
+		g2.draw(new Line2D.Double(50.0, 100.0, 50.0 + (int)(width / 6), 25.0));
+		g2.draw(new Line2D.Double(50.0 + (int)(width / 6), 25.0, 50.0 + (int)(width / 3), 100.0));
 	}
 	
 	/** 
 	 */
 	public void drawHouseFeatures(int houseX, int houseY, int houseWidth, int houseHeight)
 	{
-
+		g2.setColor(Color.CYAN);
+		Rectangle window1 = new Rectangle(houseX + houseWidth / 7, houseY + houseHeight / 3, houseWidth / 7, houseHeight / 3);
+		g2.fill(window1);
+		
+		Rectangle window2 = new Rectangle(houseX + houseWidth * 5 / 7, houseY + houseHeight * 1 / 3, houseWidth / 7, houseHeight / 3);
+		g2.fill(window2);
+		
+		g2.setColor(Color.RED);
+		Rectangle door = new Rectangle(houseX + houseWidth / 4, houseY + houseHeight / 3);
+		g2.fill(door);
 	}
 	
 	/** 
