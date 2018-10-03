@@ -34,14 +34,17 @@ public class HalloweenDrawing extends JComponent
 		drawPumpkin();
 		
 		// Draw greeting
-
+		g2.setColor(Color.RED);
+		g2.drawString("Welcome to spooky shit", 10, 10);
 	}
 	
 	/** 
 	 */
 	public void drawHouse()
 	{
-
+		g2.setColor(Color.GRAY);
+		Rectangle rect = new Rectangle(50, 50, width / 3.0,  height / 4.0);
+		g2.fill(rect);
 	}
 	
 	/** 
