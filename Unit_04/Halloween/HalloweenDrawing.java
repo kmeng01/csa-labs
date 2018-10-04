@@ -29,56 +29,77 @@ public class HalloweenDrawing extends JComponent
 		
 		// Draw house 
 		drawHouse();
-		drawHouseFeatures(50, 100, (int)(width / 3), (int)(height / 2));
+		drawHouseFeatures(50, 100, width / 3, height / 2);
 		
 		// Draw pumpkin
 		drawPumpkin();
+		drawPumpkinFace(50 + width / 2, 100, width / 3,  height / 2);
 		
 		// Draw greeting
 		g2.setColor(Color.RED);
-		g2.drawString("Welcome to spooky shack", 10, 10);
+		g2.drawString("Welcome to Spooky Shack!", 10, 10);
 	}
 	
 	/** 
 	 */
 	public void drawHouse()
 	{
+		// Set color to light brown for house
 		g2.setColor(new Color(166, 128, 100));
-		Rectangle rect = new Rectangle(50, 100, width / 3,  height / 2);
-		g2.fill(rect);
 		
+		// Create house
+		g2.fill(new Rectangle(50, 100, width / 3,  height / 2));
+		
+		// Set color to black for roofing lines
 		g2.setColor(Color.BLACK);
+		
+		// Draw two lines that define the edges of roof		
 		g2.draw(new Line2D.Double(50.0, 100.0, 50.0 + (int)(width / 6), 25.0));
-		g2.draw(new Line2D.Double(50.0 + (int)(width / 6), 25.0, 50.0 + (int)(width / 3), 100.0));
+		g2.draw(new Line2D.Double(50.0 + (int) (width / 6), 25.0, 50.0 + (int) (width / 3), 100.0));
 	}
 	
 	/** 
 	 */
 	public void drawHouseFeatures(int houseX, int houseY, int houseWidth, int houseHeight)
 	{
-		g2.setColor(Color.CYAN);
-		Rectangle window1 = new Rectangle(houseX + houseWidth / 7, houseY + houseHeight / 3, houseWidth / 7, houseHeight / 3);
-		g2.fill(window1);
+		// Set color to light blue for windows 
+		g2.setColor(new Color(137, 196, 244));
 		
-		Rectangle window2 = new Rectangle(houseX + houseWidth * 5 / 7, houseY + houseHeight * 1 / 3, houseWidth / 7, houseHeight / 3);
-		g2.fill(window2);
+		// Draw two windows
+		g2.fill(new Rectangle(houseX + houseWidth / 7, houseY + houseHeight / 3,
+			houseWidth / 7, houseHeight / 3));
+		g2.fill(new Rectangle(houseX + houseWidth * 5 / 7, houseY + houseHeight * 1 / 3,
+			houseWidth / 7, houseHeight / 3));
 		
-		g2.setColor(Color.RED);
-		Rectangle door = new Rectangle(houseX + houseWidth / 4, houseY + houseHeight / 3);
-		g2.fill(door);
+		// Set color to dark brown for door
+		g2.setColor(new Color(139, 69, 19));
+		
+		// Draw door
+		g2.fill(new Rectangle(houseX + houseWidth * 2 / 5, houseY + houseHeight / 3,
+			houseWidth / 5, houseHeight * 2 / 3));
 	}
 	
 	/** 
 	 */
 	public void drawPumpkin()
 	{
-
+		g2.setColor(new Color(255, 140, 0));
+		g2.fill(new Ellipse2D.Double(50 + width / 2, 100, width / 3,  height / 2));
 	}
 	
 	/** 
 	 */
 	public void drawPumpkinFace(int pumpkinX, int pumpkinY, int pumpkinWidth, int pumpkinHeight)
 	{
-
+		g2.setColor(Color.BLACK);
+		
+		g2.fill(new Ellipse2D.Double(pumpkinX + pumpkinWidth * 2.0 / 7.0, pumpkinY + pumpkinHeight / 4.0, pumpkinWidth / 7.0, pumpkinWidth / 7.0));
+		
+		g2.fill(new Ellipse2D.Double(pumpkinX + pumpkinWidth * 4.0 / 7.0, pumpkinY + pumpkinHeight / 4.0, pumpkinWidth / 7.0, pumpkinWidth / 7.0));
+		
+		g2.fill(new Ellipse2D.Double(pumpkinX + pumpkinWidth * 2.0 / 5.0, pumpkinY + pumpkinHeight * 3 / 5.0, pumpkinWidth / 5.0, pumpkinWidth / 5.0));
+		
+		g2.setColor(new Color(0, 100, 0));
+		g2.fill(new Rectangle(pumpkinX + pumpkinWidth * 3 / 7, pumpkinY - pumpkinHeight / 12, pumpkinWidth / 7, pumpkinHeight / 5));
 	}
 }
