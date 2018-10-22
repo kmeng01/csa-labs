@@ -20,7 +20,6 @@ public class SpeedingTicket
 	private static final int EXCESSIVE_SPEED = 30;
 	private static final int EX_SPEED_ADD_COST = 175;
 	
-
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
@@ -37,7 +36,7 @@ public class SpeedingTicket
 
 		// Calculate and display speeding ticket price
 		int ticketPrice = calcTicket(speed, speedLim, schoolZone);
-		System.out.printf("Speed traveled: %3d\nSpeed limit: %6d\nIn school zone: %3s\n%s owes $%d\n",
+		System.out.printf("\nSpeed traveled: %3d\nSpeed limit: %6d\nIn school zone: %3s\n%s owes $%d\n\n",
 			speed, speedLim, schoolZone, name, ticketPrice);	
 
 		sc.close();
@@ -66,7 +65,7 @@ public class SpeedingTicket
 			ticketPrice += (speedDriving - speedLimit) * STD_PER_EXCESS_SPEED;
 
 		// Handle case of driver being more than EXCESSIVE_SPEED over the limit
-		if (speedDriving - speedLimit >= EXCESSIVE_SPEED)
+		if (speedDriving - speedLimit > EXCESSIVE_SPEED)
 			ticketPrice += EX_SPEED_ADD_COST;
 
 		return ticketPrice;
