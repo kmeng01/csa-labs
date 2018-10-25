@@ -1,4 +1,14 @@
-
+/** 
+ * The PayCheck Class provides functionality for the calculation of a worker's wages,
+ * given their responsibilities (manager or sales clerk), working hours, sales, and 
+ * commission.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 10/27/2018
+ */
   
 public class PayCheck 
 {
@@ -6,11 +16,8 @@ public class PayCheck
 	public static final int BASE_HOURS = 40;
 	public static final double BASE_PAY_PER_HOUR = 9.75;
 	public static final int MANAGER_BONUS = 100;
-
 	public static final double[] COMMISSION_UPPER_BOUNDS = {99.99, 299.99, -1};
 	public static final double[] COMMISSION_PERCENTAGES = {0.05, 0.08, 0.13};
-
-
 	
 	/* Instance variables */
 	private String employee;
@@ -33,17 +40,33 @@ public class PayCheck
 		weeklySales = 0;
 	}
 
-
+	/** 
+	 *  Calculates a worker's total wages, comprised of base salary, overtime salary,
+	 *  commission, and the manager's bonus
+	 *  @return the total wages earned by the worker
+	 */
 	public double calcWages()
 	{
+		// Get base wages
 		double baseWages = BASE_PAY_PER_HOUR * Math.min(hoursWorked, BASE_HOURS);
+
+		// Get wages from overtime working (if any)
 		double overtimeWages = BASE_PAY_PER_HOUR * 1.5 * Math.max(0, hoursWorked - BASE_HOURS);
+
+		// Get wages from sales commission
 		double comWages = calcCommission();
+
+		// Get bonus for being a manager
 		int managerBonus = (isManager ? MANAGER_BONUS : 0);
-		
+
 		return baseWages + overtimeWages + comWages + managerBonus;
 	}
 	
+	/** 
+	 *  Calculates commission from sales of a worker and the given bounds
+	 *  and percentages for commission in a company
+	 *  @return the commission earned by the worker
+	 */
 	private double calcCommission()
 	{
 		if (weeklySales <= COMMISSION_UPPER_BOUNDS[0])

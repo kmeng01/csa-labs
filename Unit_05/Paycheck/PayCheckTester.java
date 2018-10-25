@@ -1,4 +1,14 @@
-
+/** 
+ * The PayCheckTester Class provides collects the necessary information from users
+ * regarding workers in a company and calls various functions in the PayCheck Class
+ * to calculate a worker's weekly wage
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 10/27/2018
+ */
   
 import java.text.DecimalFormat;
 import java.util.Scanner;
