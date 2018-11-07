@@ -1,4 +1,15 @@
- 
+/** 
+ * The GraphicsLab class serves as a runner class for CircleComponent and
+ * RectangleComponent. It opens two display frames and shows the 100 circles
+ * and nested rectangles on a GUI.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 11/09/2018
+ */
+
 import javax.swing.JFrame;
  
 public class GraphicsLab
@@ -19,15 +30,10 @@ public class GraphicsLab
  		// Draw circles
  		CircleComponent component = new CircleComponent();
  		frame.add(component);
-		 
-		// Draw rectangles
-		RectangleComponent rectComp = new RectangleComponent();
- 		frame.add(rectComp);
-		
+
 		 // Show frame
  		frame.setVisible(true);
 
-/*
 		// Show the rectangles in a separate frame for BONUS 
   		JFrame bonusFrame = new JFrame();
   		bonusFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -36,6 +42,6 @@ public class GraphicsLab
  		bonusFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  		bonusFrame.add(new RectangleComponent());
  		bonusFrame.setVisible(true);
-*/
+
 	}
 }
