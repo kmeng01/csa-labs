@@ -41,10 +41,10 @@ public class RectangleComponent extends JComponent
 			g2.fill(generateRect(xCoord, yCoord, width, height));
 
 			// Update running constants
-			width -= 40;
-			height -= 40;
-			xCoord += 20;
-			yCoord += 20;
+			width -= 20;
+			height -= 20;
+			xCoord += 10;
+			yCoord += 10;
 		}
 		
 	}
