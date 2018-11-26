@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<settings>
+		<label>Unit 06 - Pattern Lab</label>
+		<root_path>\</root_path>
+		<output_path>\</output_path>
+		<source_path>\</source_path>
+		<jdkprofile_ref>JDK version 1.8.0_91</jdkprofile_ref>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<ant_events/>
+	<run_items/>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref/>
+			<applet_ref/>
+			<debugger_ref/>
+			<param/>
+			<run>PatternMaker</run>
+			<verify>true</verify>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<fileitem>
+				<path>CSP-gridworld.jar</path>
+			</fileitem>
+			<fileitem>
+				<path>PatternMaker.java</path>
+			</fileitem>
+		</include>
+		<exclude>
+			<folderitem>
+				<path>Samples</path>
+				<dir/>
+			</folderitem>
+		</exclude>
+	</files>
+	<tasks/>
+</project>

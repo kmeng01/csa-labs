@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>Unit 06 - Pattern Lab</label>
+	</settings>
+	<users>
+		<user>
+			<path>Unit 06 - Pattern Lab.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Samples\Samples.jcp</path>
+		</project>
+		<project>
+			<path>Unit 06 - Pattern Lab.jcp</path>
+		</project>
+	</projects>
+</workspace>
