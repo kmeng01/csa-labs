@@ -1,0 +1,5 @@
+Error in file test3b.txt: Invalid indexes [-2, 5] for "Plano West"
+Error in file test3b.txt: Invalid indexes [7, 7] for "Wolves"
+::
+Error in file test3b.txt: Invalid indexes [15, 10] for "Royal blue, black, and white"
+Error in file test3b.txt: Invalid indexes [8, -10] for "Hail to Plano West!"

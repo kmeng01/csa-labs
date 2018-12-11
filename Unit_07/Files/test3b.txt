@@ -1,0 +1,5 @@
+ -2   5 Plano West
+  7   7 Wolves
+  5   5 Plano West
+ 15  10 Royal blue, black, and white
+  8 -10 Hail to Plano West!
