@@ -1,4 +1,15 @@
-
+/**
+ * The Files Lab class is runs a series of commands
+ * to both extract data from and write data to text
+ * files. It employs exception handling to improve
+ * robustness against negative tests.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 12/13/2018
+ */
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,7 +47,16 @@ public class FilesLab
 		}
 	}
 	
-	public static void processIntegers(String inFile, String outFile) throws IOException
+	/**
+	 * Reads in integer N, which represents the number of triplets, from inFile.
+	 * For each triplet, the minimum and maximum value in the triplet is written
+	 * to outFile.
+	 * 
+	 * @param inFile name of input file
+	 * @param outFile name of output file
+	 * @throws FileNotFoundException if either inFile or outFile is not found
+	 */
+	public static void processIntegers(String inFile, String outFile) throws FileNotFoundException
 	{
 		// declare and instantiate input/output streams
 		Scanner sc = new Scanner(new File(inFile));
@@ -64,7 +84,16 @@ public class FilesLab
 		pw.close();
 	}
 	
-	public static void testLines(String inFile, String outFile) throws IOException
+	/**
+	 * Reads in a string to find from inFile. For each following line in inFile,
+	 * the line is printed to outFile if the string to find is contained in the sentence.
+	 * Case does not matter.
+	 * 
+	 * @param inFile name of input file
+	 * @param outFile name of output file
+	 * @throws FileNotFoundException if either inFile or outFile is not found
+	 */
+	public static void testLines(String inFile, String outFile) throws FileNotFoundException
 	{
 		// declare and instantiate input/output streams
 		Scanner sc = new Scanner(new File(inFile));
@@ -87,7 +116,16 @@ public class FilesLab
 		pw.close();
 	}
 	
-	public static void extractSubstrings(String inFile, String outFile) throws IOException
+	/**
+	 * For each line in inFile, scans in hard left bound and soft right bound
+	 * to query the substring for. Outputs substring to outFile surrounded by
+	 * colons if the substring is valid. Else, an error message is written.
+	 * 
+	 * @param inFile name of input file
+	 * @param outFile name of output file
+	 * @throws FileNotFoundException if either inFile or outFile is not found
+	 */
+	public static void extractSubstrings(String inFile, String outFile) throws FileNotFoundException
 	{
 		// declare and instantiate input/output streams
 		Scanner sc = new Scanner(new File(inFile));
@@ -105,7 +143,7 @@ public class FilesLab
 			}
 			catch(IllegalArgumentException e)
 			{
-				pw.printf("Error in file %s: %s\n", inFile, e.toString().substring("java.lang.IllegalArgumentException: ".length()));
+				pw.printf("Error in file %s: %s\n", inFile, e.getMessage());
 			}
 		}
 
@@ -117,12 +155,19 @@ public class FilesLab
 		pw.close();
 	}
 	
+	/**
+	 * Helper method to extract substring of string.
+	 * 
+	 * @param index1 left bound of index (inclusive)
+	 * @param index2 right bound of index (exclusive)
+	 * @throws IllegalArgumentException if either index is out of bounds
+	 */
 	private static String getSubstring(int index1, int index2, String text) throws IllegalArgumentException
 	{
 		try {
 			return text.substring(index1, index2);
 		}
-		catch(Exception e)
+		catch(StringIndexOutOfBoundsException e)
 		{
 			throw new IllegalArgumentException(String.format("Invalid indexes [%d, %d] for \"%s\"", index1, index2, text));
 		}
