@@ -1,4 +1,15 @@
-// replace with heading
+/**
+ * The WestStudents Class provides functionality to
+ * show the average GPA's of a class of students,
+ * determine the number of people in each grade,
+ * bump GPA's, and get the names of the honors students.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 01/16/2019
+ */
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -47,6 +58,11 @@ public class WestStudents
 		System.out.println();		
 	}
 	
+	/**
+	 * Displays the information of an array of students, with
+	 * one student on each line 
+	 * @param students array of class Student
+	 */
 	public static void showStudents(Student[] students)
 	{
 		for (int i = 0; i < students.length; i++)
@@ -55,6 +71,11 @@ public class WestStudents
 		}
 	}
 	
+	/**
+	 * Finds average GPA of the students in an array
+	 * @param students array of class Student
+	 * @return average of all GPA's
+	 */
 	public static double calcAverageGPA(Student[] students)
 	{
 		double average = 0.0;
@@ -65,6 +86,12 @@ public class WestStudents
 		return average / students.length;
 	}
 	
+	/**
+	 * Returns number of people in a certain grade level.
+	 * @param students array of class Student
+	 * @param grade target grade to scan
+	 * @return number of students in specified grade
+	 */
 	public static int calcNumInGrade(Student[] students, int grade)
 	{
 		int ret = 0;
@@ -76,6 +103,14 @@ public class WestStudents
 		return ret;
 	}
 	
+	/**
+	 * Bumps GPAs if they are in the range
+	 * [minGPA, maxGPA] to maxGPA
+	 * @param students array of class Student
+	 * @param minGPA minimum GPA
+	 * @param maxGPA maximum GPA
+	 * @return number of people bumped
+	 */
 	public static int bumpGPAS(Student[] students, double minGPA, double maxGPA)
 	{
 		int ret = 0;
@@ -91,6 +126,13 @@ public class WestStudents
 		return ret;
 	}
 	
+	/**
+	 * Returns list of names of people who are graduating
+	 * with honors.
+	 * @param students array of class Student
+	 * @param honorsGPA cutoff for honors graduation
+	 * @return array of names of the selected students
+	 */
 	public static String[] getHonorStudents(Student[] students, double honorsGPA)
 	{
 		int cnt = 0;
