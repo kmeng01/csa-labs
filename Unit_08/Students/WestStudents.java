@@ -69,6 +69,7 @@ public class WestStudents
 		{
 			System.out.println(students[i].toString());
 		}
+		System.out.println();
 	}
 	
 	/**
