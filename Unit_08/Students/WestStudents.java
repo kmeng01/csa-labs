@@ -55,7 +55,7 @@ public class WestStudents
 		// Get the names of students graduating with honors
 		String[] honorStudents = getHonorStudents(westWolves, 3.6);
 		System.out.println("Honor graduates: " + Arrays.toString(honorStudents));
-		System.out.println();		
+		System.out.println();
 	}
 	
 	/**
