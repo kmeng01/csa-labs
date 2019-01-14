@@ -1,0 +1,24 @@
+23
+12  3.89873  Bodkin Van Horn
+12  4.38818  Hoos-Foos
+ 9  4.10659  Snimm
+12  3.96038  Hot-Shot
+12  4.19841  Sunny Jim
+12  4.49453  Shadrack
+10  3.57189  Blinkey
+12  1.90000  Stuffy
+12  2.62065  Stinkey
+11  3.60000  Putt-Putt
+10  3.26603  Moon Face
+12  2.49878  Marvin O'Gravel Balloon Face
+12  2.01870  Ziggy
+12  3.61602  Soggy Muff
+11  1.90083  Buffalo Bill
+11  4.01005  Biffalo Buff
+ 9  3.55000  Sneepy
+11  2.00968  Weepy Weed
+11  4.39801  Paris Garters
+10  4.60774  Harris Tweed
+10  2.95065  Sir Michael Carmichael Zutt
+12  2.00000  Oliver Boliver Butt
+12  3.59214  Zanzibar Buck-Buck McFate
