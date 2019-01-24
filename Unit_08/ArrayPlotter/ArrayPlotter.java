@@ -1,4 +1,13 @@
-
+/** 
+ * The Array Plotter uses loops and arrays to generate
+ * designs on a GridWorld canvas.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 01/24/2019
+ */
 
 public class ArrayPlotter
 {
@@ -10,7 +19,6 @@ public class ArrayPlotter
 	 *  - false: Color the cell with the Background Color.
 	 */
 	private boolean[][] colorArray;
-	
 	
 	/** Constructs an Array Plotter */
 	public ArrayPlotter()
@@ -104,8 +112,8 @@ public class ArrayPlotter
 	/** Fills in the array bottom to up, left to right */
 	public void onReverseColMajorFillButtonClick()
 	{
-		for (int row = 0; row < colorArray.length; row++)
-			for (int col = colorArray[0].length - 1; col >= 0; col--)
+		for (int row = colorArray.length - 1; row >= 0; row--)
+			for (int col = 0; col < colorArray[0].length; col++)
 			{
 				colorArray[row][col] = true;
 				gui.update(colorArray);
@@ -115,11 +123,12 @@ public class ArrayPlotter
 	/** Fills in array from top right to bottom left  */
 	public void onOtherTriangleFillButtonClick()
 	{
-		for (int col = colorArray.length - 1; col >= 0; col--)
-		{
-			colorArray[colorArray.length - col - 1][col] = true;
-			gui.update(colorArray);
-		}
+		for (int row = 0; row < colorArray[0].length; row++)
+			for (int col = colorArray.length - row - 1; col < colorArray.length; col++)
+			{
+				colorArray[row][col] = true;
+				gui.update(colorArray);
+			}
 	}
 
 	/** main method that creates the grid plotter application. */
