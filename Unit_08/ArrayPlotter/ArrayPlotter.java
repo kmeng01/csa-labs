@@ -61,8 +61,10 @@ public class ArrayPlotter
 	/** Fills in cells of the grid using col-major traversal. */
 	public void onColMajorFillButtonClick()
 	{
-		for (int col = 0; col < colorArray.length; col++)
-			for (int row = 0; row < colorArray[0].length; row++)
+		System.out.println(colorArray.length);
+		System.out.println(colorArray[0].length);
+		for (int col = 0; col < colorArray[0].length; col++)
+			for (int row = 0; row < colorArray.length; row++)
 			{
 				colorArray[row][col] = true;
 				gui.update(colorArray);
@@ -112,8 +114,9 @@ public class ArrayPlotter
 	/** Fills in the array bottom to up, left to right */
 	public void onReverseColMajorFillButtonClick()
 	{
-		for (int row = colorArray.length - 1; row >= 0; row--)
-			for (int col = 0; col < colorArray[0].length; col++)
+		for (int col = colorArray[0].length - 1; col >= 0; col--)
+			for (int row = colorArray.length - 1; row >= 0; row--)
+			
 			{
 				colorArray[row][col] = true;
 				gui.update(colorArray);
@@ -123,8 +126,8 @@ public class ArrayPlotter
 	/** Fills in array from top right to bottom left  */
 	public void onOtherTriangleFillButtonClick()
 	{
-		for (int row = 0; row < colorArray[0].length; row++)
-			for (int col = colorArray.length - row - 1; col < colorArray.length; col++)
+		for (int row = 0; row < colorArray.length; row++)
+			for (int col = colorArray[0].length - row - 1; col < colorArray[0].length; col++)
 			{
 				colorArray[row][col] = true;
 				gui.update(colorArray);
