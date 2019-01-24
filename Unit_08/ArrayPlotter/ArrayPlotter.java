@@ -1,4 +1,4 @@
-// import javax.swing.JOptionPane;
+
 
 public class ArrayPlotter
 {
@@ -50,6 +50,7 @@ public class ArrayPlotter
 			}
 	}
 
+	/** Fills in cells of the grid using col-major traversal. */
 	public void onColMajorFillButtonClick()
 	{
 		for (int col = 0; col < colorArray.length; col++)
@@ -60,6 +61,7 @@ public class ArrayPlotter
 			}
 	}
 	
+	/** Fills in all the cells of the grid in a diagonal pattern using a row-major traversal. */
 	public void onMainDiagonalFillButtonClick()
 	{
 		for (int row = 0; row < Math.min(colorArray.length, colorArray[0].length); row++)
@@ -69,6 +71,7 @@ public class ArrayPlotter
 		}
 	}
 	
+	/** Fills given row from left to right */
 	private void fillRowLeftToRight(boolean[] row)
 	{
 		for (int i = 0; i < row.length; i++)
@@ -78,6 +81,7 @@ public class ArrayPlotter
 		}
 	}
 
+	/** Fills given row from right to left */
 	private void fillRowRightToLeft(boolean[] row)
 	{
 		for (int i = row.length - 1; i >= 0; i--)
@@ -87,6 +91,7 @@ public class ArrayPlotter
 		}
 	}
 	
+	/** Fills array in a snaking fashion */
 	public void onSerpentineFillButtonClick()
 	{
 		for (int i = 0; i < colorArray.length; i += 2)
@@ -96,6 +101,7 @@ public class ArrayPlotter
 		}
 	}
 
+	/** Fills in the array bottom to up, left to right */
 	public void onReverseColMajorFillButtonClick()
 	{
 		for (int row = 0; row < colorArray.length; row++)
@@ -106,6 +112,7 @@ public class ArrayPlotter
 			}
 	}
 
+	/** Fills in array from top right to bottom left  */
 	public void onOtherTriangleFillButtonClick()
 	{
 		for (int col = colorArray.length - 1; col >= 0; col--)
