@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import javax.swing.JComponent;
-import java.util.List;
 import java.util.ArrayList;
 
 public class CirclesComponent extends JComponent
