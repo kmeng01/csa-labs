@@ -1,6 +1,11 @@
 /**
- *   CirclesLab.java
- *   Drawing non-intersecting circles
+ * The CirclesLab Class is the runner for CircleComponent
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 02/05/2019
  */
  
 import javax.swing.JFrame;

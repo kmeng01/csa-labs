@@ -1,3 +1,13 @@
+/**
+ * The CirclesComponent Class provides functionality to draw
+ * 1000 circles that never overlap on a Graphics2D surface.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 02/05/2019
+ */
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -28,6 +38,9 @@ public class CirclesComponent extends JComponent
 		drawCircles(g2);
 	}
 	
+	/**
+	 * Generates NUM_CIRCLES number of circles that never intersect
+	 */
 	private void generateCircles()
 	{
 		circles.clear();
@@ -43,6 +56,10 @@ public class CirclesComponent extends JComponent
 		}
 	}
 
+	/**
+	 * Draws all cirlces in ArrayList on the g2 canvas
+	 * @param g2 Graphics2D canvas
+	 */
 	private void drawCircles(Graphics2D g2)
 	{
 		for (int i = 0; i < this.NUM_CIRCLES; i++)
@@ -56,7 +73,12 @@ public class CirclesComponent extends JComponent
 		}
 	}		
 
-	// 100-point Version
+	/**
+	 * Checks whether given circle intersects with any circle already
+	 * generated
+	 * @param circle Ellipse2D.Double object representing circle
+	 * @return true if intersection occurs, false if not
+	 */
 	private boolean circleIntersects(Ellipse2D.Double circle)
 	{
 		double cx = circle.getCenterX(), cy = circle.getCenterY();
