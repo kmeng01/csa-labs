@@ -1,4 +1,14 @@
- 
+/**
+ * The StudentGroup Class provides functionality to search and sort
+ * an array using a variety of algorithms.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 02/19/2019
+ */
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -31,6 +41,12 @@ public class StudentGroup
 		readFile(fileName);
 	}
 
+	/**
+	 * Given array of students, finds student with target name
+	 * and gives the student object
+	 * @param name target name to find
+	 * @return student object if name found, otherwise null
+	 */
 	public Student findByName(String name) 
 	{
 		for (int i = 0; i < numStudents; i++)
@@ -41,6 +57,10 @@ public class StudentGroup
 		return null;
 	}
 	
+	/**
+	 * Sorts students array by student name using the insertion sort
+	 * algorithm
+	 */
 	public void sortByName() 
 	{
 		for (int i = 1; i < numStudents; i++)
@@ -56,6 +76,10 @@ public class StudentGroup
 		}
 	}
 
+	/**
+	 * Sorts students array by ID using the selection sort
+	 * algorithm
+	 */
 	public void sortByID() 
 	{
 		for (int i = 0; i < numStudents - 1; i++)
@@ -76,9 +100,10 @@ public class StudentGroup
 	}
 
 	/**
-	 * Given a sorted 
-	 * @param id
-	 * @return
+	 * Given a sorted array of students and a target array that is 
+	 * sorted by ID, returns the student object with the ID.
+	 * @param id target ID number to find
+	 * @return student object if found, null otherwise
 	 */
 	public Student findByID(int id) 
 	{

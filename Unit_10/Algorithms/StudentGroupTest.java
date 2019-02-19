@@ -1,6 +1,12 @@
 /**
- * StudentGroupTest.java
- * Test the StudentGroup class
+ * The StudentGroupTest Class is the runner for StudentGroup.java. It
+ * calls all the commands and outputs in the necessary order.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 02/19/2019
  */
 
 public class StudentGroupTest 
