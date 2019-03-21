@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp",
+        "algorithm": "cpp",
+        "xutility": "cpp",
+        "cmath": "cpp"
+    },
+    "java.referencesCodeLens.enabled": false
+}

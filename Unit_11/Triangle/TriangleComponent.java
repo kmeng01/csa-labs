@@ -23,6 +23,7 @@ public class TriangleComponent extends JComponent
 	private static final Color PURPLE = new Color(153, 0, 255);
 	private static final Color[] colors = {LAVENDER, Color.cyan, Color.darkGray, Color.blue, 
 		PURPLE, Color.pink, Color.black, Color.lightGray};
+	private static final int BORDER = 5;
 		
 	// Graphics object used for drawing
 	private Graphics2D gr;
@@ -34,7 +35,7 @@ public class TriangleComponent extends JComponent
 	public void paintComponent(Graphics g) 
 	{
 		gr = (Graphics2D) g;
-		drawTriangle(this.getWidth() / 2, 5, 5, this.getHeight() - 5, this.getWidth() - 5, this.getHeight() - 5, 0);
+		drawTriangle(this.getWidth() / 2, BORDER, BORDER, this.getHeight() - BORDER, this.getWidth() - BORDER, this.getHeight() - BORDER, 0);
 	}
 	
 	/**
