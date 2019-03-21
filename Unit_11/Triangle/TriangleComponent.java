@@ -21,7 +21,7 @@ public class TriangleComponent extends JComponent
 	// constant class array to hold progression of colors
 	private static final Color LAVENDER = new Color(204, 153, 255);
 	private static final Color PURPLE = new Color(153, 0, 255);
-	private static final Color[] colors = {LAVENDER, Color.cyan, Color.darkGray, Color.blue, 
+	private static final Color[] colors = {LAVENDER, Color.cyan, Color.darkGray, Color.blue,
 		PURPLE, Color.pink, Color.black, Color.lightGray};
 	private static final int BORDER = 5;
 		
@@ -35,7 +35,9 @@ public class TriangleComponent extends JComponent
 	public void paintComponent(Graphics g) 
 	{
 		gr = (Graphics2D) g;
-		drawTriangle(this.getWidth() / 2, BORDER, BORDER, this.getHeight() - BORDER, this.getWidth() - BORDER, this.getHeight() - BORDER, 0);
+		drawTriangle(this.getWidth() / 2, BORDER,
+					BORDER, this.getHeight() - BORDER,
+					this.getWidth() - BORDER, this.getHeight() - BORDER, 0);
 	}
 	
 	/**
@@ -51,7 +53,8 @@ public class TriangleComponent extends JComponent
 	private void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3, int colorIndex)
 	{
 		// break out if any necessary intervals cannot be divided further
-		if ((x1 + x2) / 2 == x1 || (x1 + x3) / 2 == x1 || (x2 + x3) / 2 == x2 || (y1 + y2) / 2 == y1) return;
+		if ((x1 + x2) / 2 == x1 || (x1 + x3) / 2 == x1 || (x2 + x3) / 2 == x2 ||
+			(y1 + y2) / 2 == y1) return;
 
 		int[] xpoints = {x1, x2, x3};
 		int[] ypoints = {y1, y2, y3};
@@ -59,9 +62,12 @@ public class TriangleComponent extends JComponent
 		gr.setColor(colors[colorIndex]);
 		gr.fill(tri);
 
-		drawTriangle(x1, y1, (x1 + x2) / 2, (y1 + y2) / 2, (x1 + x3) / 2, (y1 + y2) / 2, (colorIndex + 1) % colors.length); // top triangle (top point constant)
-		drawTriangle((x1 + x2) / 2, (y1 + y2) / 2, x2, y2, (x2 + x3) / 2, y3, (colorIndex + 1) % colors.length); // left triangle (bottom left point constant)
-		drawTriangle((x1 + x3) / 2, (y1 + y2) / 2, (x2 + x3) / 2, y2, x3, y3, (colorIndex + 1) % colors.length); // right triangle (bottom right point constant)
+		drawTriangle(x1, y1, (x1 + x2) / 2, (y1 + y2) / 2, (x1 + x3) / 2, (y1 + y2) / 2,
+			(colorIndex + 1) % colors.length); // top triangle (top point constant)
+		drawTriangle((x1 + x2) / 2, (y1 + y2) / 2, x2, y2, (x2 + x3) / 2, y3,
+			(colorIndex + 1) % colors.length); // left triangle (bottom left point constant)
+		drawTriangle((x1 + x3) / 2, (y1 + y2) / 2, (x2 + x3) / 2, y2, x3, y3,
+			(colorIndex + 1) % colors.length); // right triangle (bottom right point constant)
 	}
 
 }
