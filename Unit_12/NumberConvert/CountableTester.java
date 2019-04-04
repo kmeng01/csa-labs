@@ -16,13 +16,14 @@ public class CountableTester
 		System.out.println("Testing HexInteger Class - 80 pt version");
 		System.out.println("---------------------------------------------------");
 		test80PointVersion();
-/*
+
 		// Uncomment these methods as you get to them
 		System.out.println("---------------------------------------------------");
 		System.out.println("Testing RomanNumeral Class - 90 & 100 pt versions");
 		System.out.println("---------------------------------------------------");
 		test90and100PointVersions();
 
+/*
 		System.out.println("---------------------------------------------------");
 		System.out.println("Testing RomanNumeral Class - 110 pt version");
 		System.out.println("---------------------------------------------------");
@@ -77,7 +78,6 @@ public class CountableTester
 	
 	/** Tests the 90- and 100-point versions of the RomanNumeral Class
 	 */
-/* Uncomment to compile and run
 	public static void test90and100PointVersions()
 	{
 		// Test Countable implementation
@@ -117,7 +117,7 @@ public class CountableTester
 		System.out.println();
 
 	}
-*/
+	
 	/** Tests the 110-point versions of the RomanNumeral Class
 	 */
 /* Uncomment to compile and run

@@ -37,25 +37,39 @@ public class RomanNumeral implements Comparable<RomanNumeral>, Countable
 	
 	public void reset(String newRomanNum)
 	{
-
-
-
+		romanStr = newRomanNum;
+		
+		romanInt = 0;
+		String temp = romanStr;
+		for (int i = 0; i < ROMAN_LETTERS.length; i++)
+		{
+			String rom = ROMAN_LETTERS[i];
+			while (temp.contains(rom))
+			{
+				temp = temp.replace(rom, "");
+				romanInt += ROMAN_VALUES[i];
+			}
+		}
 	}
 
-
-	
 	public void reset(int newNum)
 	{
-
-
-
-
+		romanInt = newNum;
+		
+		romanStr = new String("");
+		while (newNum != 0)
+		{
+			int idx = 0;
+			while (newNum - ROMAN_VALUES[idx] < 0 && idx < ROMAN_VALUES.length - 1) ++idx;
+			newNum -= ROMAN_VALUES[idx];
+			romanStr += ROMAN_LETTERS[idx];
+		}
 	}
 	
 	@Override
 	public int getValue()
 	{
-		return 0;
+		return romanInt;
 	}
 	
 	/** Determines whether or not 2 roman numerals are the same
