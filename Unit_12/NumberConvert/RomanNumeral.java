@@ -1,7 +1,13 @@
-
-
-
-
+/**
+ * The RomanNumberal Class praodives the functionality to manipulate romanatwood numbers
+ * and update them.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 4/5/2019
+ */
 
 public class RomanNumeral implements Comparable<RomanNumeral>, Countable
 {
@@ -35,6 +41,10 @@ public class RomanNumeral implements Comparable<RomanNumeral>, Countable
 		reset(num);
 	}
 	
+	/**
+	 * Sets instance variables of class to reflect the new inputted roman number
+	 * @param newRomanNum new string value of roman number
+	 */
 	public void reset(String newRomanNum)
 	{
 		romanStr = newRomanNum;
@@ -44,14 +54,18 @@ public class RomanNumeral implements Comparable<RomanNumeral>, Countable
 		for (int i = 0; i < ROMAN_LETTERS.length; i++)
 		{
 			String rom = ROMAN_LETTERS[i];
-			while (temp.contains(rom))
+			while (temp.indexOf(rom) == 0)
 			{
-				temp = temp.replace(rom, "");
+				temp = temp.replaceFirst(rom, "");
 				romanInt += ROMAN_VALUES[i];
 			}
 		}
 	}
 
+	/**
+	 * Sets instance variables of class to refelct the new inputted roman number
+	 * @param newNum new integer value of roman number
+	 */
 	public void reset(int newNum)
 	{
 		romanInt = newNum;
@@ -66,6 +80,10 @@ public class RomanNumeral implements Comparable<RomanNumeral>, Countable
 		}
 	}
 	
+	/**
+	 * Implements getValue from Countable interface.
+	 * @return integer value of roman number
+	 */
 	@Override
 	public int getValue()
 	{

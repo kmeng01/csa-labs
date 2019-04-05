@@ -1,4 +1,13 @@
-
+/**
+ * The HexInteger Class praodives the functionality to manipulate hex numbers
+ * and update them.
+ *
+ * @author Kevin Meng
+ * Collaborators: None
+ * Teacher Name: Mrs. Ishman
+ * Period: 7
+ * Due Date: 4/5/2019
+ */
 
 public class HexInteger implements Comparable<HexInteger>, Countable
 {
@@ -26,23 +35,27 @@ public class HexInteger implements Comparable<HexInteger>, Countable
 	}
 	
 	/**
-	 * 
-	 * @param newDecNum
+	 * Sets instance variables for new hex number
+	 * @param newDecNum integer value of new hex
 	 */
 	public void reset(int newDecNum)
 	{
-		hexValue = Integer.toHexString(newDecNum);
+		hexValue = Integer.toHexString(newDecNum).toUpperCase();
 	}
 	
 	/**
-	 * 
-	 * @param newHexNum
+	 * Sets instance variable for new hex number
+	 * @param newHexNum string value of new hex
 	 */
 	public void reset(String newHexNum)
 	{
 		hexValue = newHexNum;
 	}
 	
+	/**
+	 * Implements getValue from Countable interface
+	 * @return integer value of hex number
+	 */
 	@Override
 	public int getValue()
 	{
