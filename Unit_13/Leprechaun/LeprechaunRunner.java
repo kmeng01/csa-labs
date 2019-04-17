@@ -1,4 +1,3 @@
-
 /**
  * The LeprekanRunir Class is the driver class for the rest of the
  * files in this assignment. It creates all objects necessary.
